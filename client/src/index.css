@@ -1,0 +1,147 @@
+
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #1e293b;
+  background: #f1f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f1f5f9;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Main heading */
+h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #0f172a;
+  margin-bottom: 28px;
+}
+
+/* Search input */
+input[type="text"] {
+  width: 100%;
+  max-width: 450px;
+  padding: 13px 16px;
+  margin-bottom: 24px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgb(99 102 241 / 12%);
+}
+
+/* Dropdowns, if you add filters later */
+select {
+  padding: 12px 14px;
+  margin: 0 10px 20px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #334155;
+  outline: none;
+}
+
+/* Product card */
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 4%);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgb(15 23 42 / 10%);
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.product-card p {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* Product image */
+.product-card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+/* Responsive product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+  width: 100%;
+}
+
+/* Responsive spacing */
+@media (max-width: 600px) {
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-card img {
+    height: 130px;
+  }
+}
+
